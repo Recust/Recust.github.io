@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3班级官网v0.6</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .feature img {
+            width: 400px;
+            height: 200px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        a {
+            color: #0048ff;
+        }
+        .feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0px;
+        }
+        /*title字号*/
+        .feature h3 {
+            font-size: 15px;
+        }
+        /*中间字字号*/
+        .feature p {
+            font-size: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body background="https://ts1.cn.mm.bing.net/th/id/R-C.c2f6165e1acf6b986a20e8b676f13bdd?rik=Dm%2bD%2fgeM4oqgBw&riu=http%3a%2f%2fwww.quazero.com%2fuploads%2fallimg%2f140303%2f1-140303215045.jpg&ehk=sdIsCQj%2bvjKfUs%2fDw%2fZekILroLb1ALwbKghApSPIq4U%3d&risl=&pid=ImgRaw&r=0" style="background-repeat:no-repeat;
+               background-attachment:fixed;background-size:100% 100%; " >
+<div class="container">
+    <center><h2>7.3班级官方网站v0.6</h2></center>
+    <p id="current-time"></p>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1; // getMonth()返回的月份从0开始，所以需要加1
+            const date = now.getDate();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const currentTime = `<time datetime="${year}-${month}-${date} ${hours}:${minutes}:${seconds}">${year}年${month}月${date}日 ${hours}:${minutes}:${seconds}</time>`;
+            document.getElementById("current-time").innerHTML = currentTime;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000); // 每隔1秒更新一次时间
+    </script>
+    <div class="feature">
+    <img src="./kebiao.jpg">
+    </div>
+    <a href="./function.html" target="_blank">点击跳转至功能区</a>
+
+
+
+
+</div>
+</div>
+</body>
+</html>
